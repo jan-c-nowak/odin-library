@@ -66,5 +66,7 @@ library.forEach(book => {
     status.innerText = `Status: ${book.currentStatus()}`;
     card.appendChild(status);
 
-    document.body.appendChild(card);
+    let cards_section = document.getElementById("cards")
+    cards_section.appendChild(card);
 });
+

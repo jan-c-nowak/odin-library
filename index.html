@@ -6,15 +6,38 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="library.js" defer></script>
+    <script src="sidebar.js" defer></script>
 </head>
 <body>
-    <article class="card">
-        <h2 class="title">Title</h2>
-        <h3 class="author">Author</h3>
-        <hr>
-        <span class="length">222</span>
-        <hr>
-        <span>Status: not read</span>
-    </article>
+    <section id="cards">
+        <article class="card">
+            <h2 class="title">Title</h2>
+            <h3 class="author">Author</h3>
+            <hr>
+            <span class="length">222</span>
+            <hr>
+            <span>Status: not read</span>
+        </article>
+    </section>
+
+    <div class="controls">
+        <div id="mySidebar" class="sidebar">
+            <p>Enter book's info :)</p>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <form action="">
+                <label for="bookname">Name: <input type="text" name="bookname" id="bookname"></label>
+                <label for="author">Author: <input type="text" name="author" id="author"></label>
+                <label for="pages">Page count: <input type="number" name="pages" id="pages"></label>
+                <label class="horizontal-flex" for="read">Book read?:<input type="checkbox" name="read" id="read"></label>
+                <button class="openbtn" type="submit">+ Add book</button>
+            </form>
+        </div>
+        
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">+ Add book</button>
+        </div>
+    </div>
+
+    
 </body>
 </html>
